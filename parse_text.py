@@ -109,7 +109,10 @@ def count(file_name='script.txt'):
         print "ParseError: " + err.msg.split('\n', 1)[0]
         return
         
+    print "Number of acts: %d" % (len(p['acts']), )
+        
     for act in p['acts']:
+        print act
         for script_line in act['script_lines']:
             name = script_line['performer_name']
             for phrase in script_line['phrases']:
